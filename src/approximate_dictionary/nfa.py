@@ -30,7 +30,7 @@ def initialize_nfa(k):
     return res
 
 
-@numba.jitclass([
+@numba.experimental.jitclass([
     ('bitmaps', numba.types.DictType(numba.int32, numba.int64)),
     ('state', numba.int64[:, :]),
     ('first_active', numba.int64[:]),

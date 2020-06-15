@@ -54,7 +54,7 @@ def create_trie_from_state(edge_ptr, edges, children, records, depth):
     return Trie(edge_ptr, edges, children, numba_records, depth)
 
 
-@numba.jitclass([
+@numba.experimental.jitclass([
     ('edge_ptr', numba.int32[:]),
     ('edges', numba.int32[:]),
     ('children', numba.int32[:]),
